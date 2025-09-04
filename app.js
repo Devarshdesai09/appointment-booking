@@ -1,9 +1,10 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const cors = require('cors')
 const mongoose = require('mongoose');
-const Mongo_url = "mongodb://127.0.0.1:27017/animalhusbandary";
+const Mongo_url = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/animalhusbandary";
 const baseUser  = require('./models/user')
 const doctor = require('./models/doctor')
 const animaldetailtreat = require('./models/animaldetailtreat')

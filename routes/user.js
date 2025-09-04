@@ -2,7 +2,8 @@ const router = require("express").Router();
 const user = require('../models/user')
 const jwt = require("jsonwebtoken");
 const {authenticateToken} = require("./userauth")
-const bcrypt = require("bcrypt")
+// const bcrypt = require("bcryptjs")
+const bcrypt = require("bcryptjs")
 const sendEmail = require("../emailservices/emailser")
 router.post("/sign-up",async(req,res)=>{
     try {
